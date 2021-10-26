@@ -329,7 +329,7 @@ tls_config() {
 	while :; do
 		echo
 		echo -e "请输入一个 ${magenta}正确的域名${none}，一定一定一定要正确，不！能！出！错！"
-		read -p "(例如：233blog.com): " domain
+		read -p "(例如：dahuilang.com): " domain
 		[ -z "$domain" ] && error && continue
 		echo
 		echo
@@ -617,8 +617,8 @@ shadowsocks_password_config() {
 
 	while :; do
 		echo -e "请输入 "$yellow"Shadowsocks"$none" 密码"
-		read -p "$(echo -e "(默认密码: ${cyan}233blog.com$none)"): " sspass
-		[ -z "$sspass" ] && sspass="233blog.com"
+		read -p "$(echo -e "(默认密码: ${cyan}lang$none)"): " sspass
+		[ -z "$sspass" ] && sspass="lang"
 		case $sspass in
 		*[/$]*)
 			echo
@@ -794,7 +794,7 @@ install_v2ray() {
 			echo
 			echo -e "$red 哎呀呀...安装失败了咯...$none"
 			echo
-			echo -e " 请确保你有完整的上传 233v2.com 的 V2Ray 一键安装脚本 & 管理脚本到当前 ${green}$(pwd) $none目录下"
+			echo -e " 请确保你有完整的上传 dahuilang 的 V2Ray 一键安装脚本 & 管理脚本到当前 ${green}$(pwd) $none目录下"
 			echo
 			exit 1
 		fi
@@ -802,7 +802,7 @@ install_v2ray() {
 		cp -rf $(pwd)/* /etc/v2ray/233boy/v2ray
 	else
 		pushd /tmp
-		git clone https://github.com/233boy/v2ray -b "$_gitbranch" /etc/v2ray/233boy/v2ray --depth=1
+		git clone https://github.com/shidahuilang/v2ray -b "$_gitbranch" /etc/v2ray/233boy/v2ray --depth=1
 		popd
 
 	fi
@@ -977,7 +977,7 @@ uninstall() {
 		echo -e "
 		$red 大胸弟...你貌似毛有安装 V2Ray ....卸载个鸡鸡哦...$none
 
-		备注...仅支持卸载使用我 (233v2.com) 提供的 V2Ray 一键安装脚本
+		备注...仅支持卸载使用我 (dahuilang) 提供的 V2Ray 一键安装脚本
 		" && exit 1
 	fi
 
@@ -1012,10 +1012,7 @@ clear
 while :; do
 	echo
 	echo "........... V2Ray 一键安装脚本 & 管理脚本 by 233v2.com .........."
-	echo
-	echo "帮助说明: https://233v2.com/post/1/"
-	echo
-	echo "搭建教程: https://233v2.com/post/2/"
+
 	echo
 	echo " 1. 安装"
 	echo
