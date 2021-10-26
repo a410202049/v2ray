@@ -18,6 +18,4 @@ if [[ $shadowsocks ]]; then
 	echo
 	echo -e "提示: 输入 $cyan v2ray ssqr $none 可生成 Shadowsocks 二维码链接"	
 	echo
-	echo -e "${yellow}免被墙..推荐使用JMS: ${cyan}https://getjms.com${none}"
-	echo
 fi
