@@ -228,8 +228,8 @@ socks_user_config() {
 socks_pass_config() {
 	echo
 	while :; do
-		read -p "$(echo -e "请输入$yellow密码$none...(默认密码: ${cyan}233blog.com$none)"): " new_socks_userpass
-		[ -z "$new_socks_userpass" ] && new_socks_userpass="233blog.com"
+		read -p "$(echo -e "请输入$yellow密码$none...(默认密码: ${cyan}lang$none)"): " new_socks_userpass
+		[ -z "$new_socks_userpass" ] && new_socks_userpass="lang"
 		case $new_socks_userpass in
 		*[/$]* | *\&*)
 			echo
